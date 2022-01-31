@@ -1,0 +1,15 @@
+C:\Work\SkoleTools\SkoleTools\bin\Debug\SkoleTools.exe.config
+C:\Work\SkoleTools\SkoleTools\bin\Debug\SkoleTools.exe
+C:\Work\SkoleTools\SkoleTools\bin\Debug\SkoleTools.pdb
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.AssemblyReference.cache
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.SuggestedBindingRedirects.cache
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.MainForm.resources
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Properties.Resources.resources
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.GenerateResource.cache
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.CoreCompileInputs.cache
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.exe
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.pdb
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Tools.OpgaverDotComBypass.resources
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Tools.Information.resources
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.CopyComplete
+C:\Work\SkoleTools\SkoleTools\bin\Debug\WebDriver.dll
