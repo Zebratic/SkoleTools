@@ -119,7 +119,7 @@ namespace SkoleTools.Tools
                     ChromeOptions cho = new ChromeOptions();
                     cho.AddArgument("--user-agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25");
                     cho.AddArgument("--incognito");
-                    //cho.AddArgument("--headless");
+                    cho.AddArgument("--headless");
 
                     ChromeDriverService service = ChromeDriverService.CreateDefaultService();
                     service.HideCommandPromptWindow = true;
@@ -134,7 +134,6 @@ namespace SkoleTools.Tools
                             driver.Navigate().GoToUrl("https://www.google.com/url?q=" + url);
 
                             driver.FindElement(By.LinkText(url)).Click();
-                            MessageBox.Show("");
                             txtOpgaven.Text = driver.FindElement(By.ClassName("tastyled")).Text;
                             success = true;
                         }
