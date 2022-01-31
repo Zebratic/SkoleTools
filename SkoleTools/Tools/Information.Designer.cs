@@ -38,7 +38,7 @@
             this.txtInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInformation.Location = new System.Drawing.Point(0, 0);
             this.txtInformation.Name = "txtInformation";
-            this.txtInformation.Size = new System.Drawing.Size(653, 285);
+            this.txtInformation.Size = new System.Drawing.Size(702, 281);
             this.txtInformation.TabIndex = 0;
             this.txtInformation.Text = resources.GetString("txtInformation.Text");
             // 
@@ -46,7 +46,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 285);
+            this.ClientSize = new System.Drawing.Size(702, 281);
             this.Controls.Add(this.txtInformation);
             this.Name = "Information";
             this.Text = "Information";
