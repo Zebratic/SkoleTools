@@ -24,8 +24,9 @@ namespace SkoleTools
         {
             Tools.Add("Information", new Information());
             Tools.Add("Opgaver.com Bypass", new OpgaverDotComBypass());
+            Tools.Add("Genskriv tekst (Engelsk)", new EngelskGenskriver());
+            Tools.Add("Matematik Udregner", new MatematikUdregner());
             //Tools.Add("Genskriv tekst (Dansk)");
-            //Tools.Add("Genskriv tekst (Engelsk)");
             //Tools.Add("Plagiat Tjek");
 
 

@@ -13,3 +13,5 @@ C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Tools.OpgaverDotComBypass.res
 C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Tools.Information.resources
 C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.CopyComplete
 C:\Work\SkoleTools\SkoleTools\bin\Debug\WebDriver.dll
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Tools.EngelskGenskriver.resources
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Tools.MatematikUdregner.resources
