@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using SkoleTools.Libs;
 
 namespace SkoleTools.Tools
 {
@@ -19,6 +21,7 @@ namespace SkoleTools.Tools
     {
         public List<Image> pages = new List<Image>();
         public int CurrentImageIndex = 0;
+        public int ID = 0;
         public OpgaverDotComBypass()
         {
             InitializeComponent();
@@ -33,6 +36,7 @@ namespace SkoleTools.Tools
             {
                 pages = new List<Image>();
                 CurrentImageIndex = 0;
+                ID = Convert.ToInt32(url.Split('=')[1]);
                 picPages.Image = null;
                 txtOpgaven.Text = "Downloader...\nVent venligst...";
                 lblOpgaveInfo.Text = $"Titel:\n\n\n" +
@@ -93,16 +97,12 @@ namespace SkoleTools.Tools
 
                             try
                             {
-                                int ID = Convert.ToInt32(url.Split('=')[1]);
                                 int MaxNR = Convert.ToInt32(sidetal);
                                 for (int i = 1; i <= MaxNR; i++)
                                 {
                                     byte[] imageData = wc.DownloadData($"https://opgaver.com/site/previews/medium/{ID}-{i}.png");
                                     using (var ms = new MemoryStream(imageData))
-                                    {
                                         pages.Add(Image.FromStream(ms));
-                                        Console.WriteLine(i);
-                                    }
                                 }
                                 picPages.Image = pages.First();
                             }
@@ -170,6 +170,62 @@ namespace SkoleTools.Tools
 
                 picPages.Image = pages[CurrentImageIndex];
             }
+        }
+
+        private void picPages_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+                Menu.Show(Cursor.Position);
+        }
+
+        private void downloadBilledeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog savefile = new SaveFileDialog();
+            savefile.FileName = $"{ID}_{(CurrentImageIndex + 1)}.png";
+            savefile.Filter = "Image files (*.png)|*.png|All files (*.*)|*.*";
+
+            if (savefile.ShowDialog() == DialogResult.OK)
+                pages[CurrentImageIndex].Save(savefile.FileName);
+        }
+
+        private void btnFixFormat_Click(object sender, EventArgs e)
+        {
+            picPages.Image = ImageEnhancer.AdjustContrast(new Bitmap(picPages.Image), -10.0f);
+
+
+
+            btnDownloadDocx.Enabled = true; // if success
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            float contrast = 0.04f * trackBar2.Value;
+            Bitmap bm = new Bitmap(pages[CurrentImageIndex].Width, pages[CurrentImageIndex].Height);
+            
+            Graphics g = Graphics.FromImage(bm);
+            ImageAttributes ia = new ImageAttributes();
+
+            ColorMatrix cm = new ColorMatrix(new float[][]
+            {
+                new float[] { contrast, 0f, 0f, 0f, 0f},
+                new float[] { 0f, contrast, 0f, 0f, 0f},
+                new float[] { 0f, 0f, contrast, 0f, 0f},
+                new float[] { 0f, 0f, 0f, 1f, 0f},
+
+                new float[] { 0.001f, 0.001f, 0.001f, 0f, 1f }
+            });
+
+            ia.SetColorMatrix(cm);
+
+            g.DrawImage(pages[CurrentImageIndex], new Rectangle(0, 0, picPages.Image.Width, picPages.Image.Height), 0, 0, picPages.Image.Width, picPages.Image.Height, GraphicsUnit.Pixel, ia);
+            g.Dispose();
+            ia.Dispose();
+            picPages.Image = bm;
         }
     }
 }
