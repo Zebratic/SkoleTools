@@ -10,10 +10,15 @@ Intet er bedre end selv at lave arbejdet selv, så brug det til rådgivning frem
 Jeg tager INTET ansvar hvis du bliver taget i plagiat eller andet.
 Så brug din hjerne inden du vælger at være afhængig af mit tool!
 
+# Sådan gør du:
+## Opgaver.com Bypass/Downloader
+#### Brug HTTP Method!!! (Da det er den bedste)
+Smid linket ind og klik download
+
 # Tool liste
 - [x] Opgaver.com Bypass/Downloader
-  - [x] HTTP Metode
-  - [x] Selenium Metode
+  - [x] HTTP Method
+  - [x] Selenium Method
 - [ ] Plagiat tjekker
 - [ ] Tekst omskriver
   - [ ] Engelsk
