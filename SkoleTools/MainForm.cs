@@ -1,4 +1,5 @@
-﻿using SkoleTools.Tools;
+﻿using SkoleTools.Libs;
+using SkoleTools.Tools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,17 @@ namespace SkoleTools
 {
     public partial class MainForm : Form
     {
+        public static int hotkeyid = 0;
         public MainForm()
         {
             InitializeComponent();
+            HotKeyManager.HotKeyPressed += HotKeyManager_HotKeyPressed;
+            hotkeyid = HotKeyManager.RegisterHotKey(Keys.Home, KeyModifiers.None);
+        }
+        
+        private void HotKeyManager_HotKeyPressed(object sender, HotKeyEventArgs e)
+        {
+            this.Invoke((MethodInvoker)delegate { this.Visible = !this.Visible; if (this.Visible) this.Focus(); });
         }
 
         public Dictionary<string, Form> Tools = new Dictionary<string, Form>();
@@ -24,12 +33,11 @@ namespace SkoleTools
         {
             Tools.Add("Information", new Information());
             Tools.Add("Opgaver.com Bypass", new OpgaverDotComBypass());
-            Tools.Add("Secret Browser", new SecretBrowser());
-            Tools.Add("Genskriv tekst (Engelsk)", new EngelskGenskriver());
-            Tools.Add("Matematik Udregner", new MatematikUdregner());
+            Tools.Add("Skjult Browser", new SkjultBrowser());
+            //Tools.Add("Genskriv tekst (Engelsk)", new EngelskGenskriver());
+            //Tools.Add("Matematik Udregner", new MatematikUdregner());
             //Tools.Add("Genskriv tekst (Dansk)");
             //Tools.Add("Plagiat Tjek");
-
 
             foreach (string name in Tools.Keys)
                 cbTools.Items.Add(name);
@@ -65,7 +73,6 @@ namespace SkoleTools
                 form.BringToFront();
             }
             catch { }
-            
         }
     }
 }

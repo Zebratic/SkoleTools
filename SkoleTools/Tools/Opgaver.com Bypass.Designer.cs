@@ -42,15 +42,15 @@
             this.downloadBilledeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnFixFormat = new System.Windows.Forms.Button();
             this.btnDownloadDocx = new System.Windows.Forms.Button();
-            this.picBanner = new System.Windows.Forms.PictureBox();
-            this.picPages = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.picBanner = new System.Windows.Forms.PictureBox();
+            this.picPages = new System.Windows.Forms.PictureBox();
             this.Menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPages)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPages)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDownloadOpgave
@@ -180,6 +180,24 @@
             this.btnDownloadDocx.Text = "Download .docx";
             this.btnDownloadDocx.UseVisualStyleBackColor = true;
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(5, 542);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(626, 45);
+            this.trackBar1.TabIndex = 14;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(5, 593);
+            this.trackBar2.Maximum = 100;
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(626, 45);
+            this.trackBar2.TabIndex = 15;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
+            // 
             // picBanner
             // 
             this.picBanner.BackgroundImage = global::SkoleTools.Properties.Resources.logo;
@@ -198,24 +216,6 @@
             this.picPages.TabIndex = 5;
             this.picPages.TabStop = false;
             this.picPages.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picPages_MouseClick);
-            // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(5, 542);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(626, 45);
-            this.trackBar1.TabIndex = 14;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            // 
-            // trackBar2
-            // 
-            this.trackBar2.Location = new System.Drawing.Point(5, 593);
-            this.trackBar2.Maximum = 100;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(626, 45);
-            this.trackBar2.TabIndex = 15;
-            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // OpgaverDotComBypass
             // 
@@ -238,12 +238,12 @@
             this.Controls.Add(this.txtURL);
             this.Controls.Add(this.btnDownloadOpgave);
             this.Name = "OpgaverDotComBypass";
-            this.Text = "Opgaver";
+            this.Text = "Opgaver.com Bypass";
             this.Menu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPages)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBanner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPages)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

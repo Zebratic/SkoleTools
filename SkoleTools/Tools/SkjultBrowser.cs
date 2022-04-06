@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SkoleTools.Tools
 {
-    public partial class SecretBrowser : Form
+    public partial class SkjultBrowser : Form
     {
-        public SecretBrowser()
+        public SkjultBrowser()
         {
             InitializeComponent();
         }

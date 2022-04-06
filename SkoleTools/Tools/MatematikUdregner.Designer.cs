@@ -68,7 +68,7 @@
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.txtEquation);
             this.Name = "MatematikUdregner";
-            this.Text = "MatematikUdregner";
+            this.Text = "Matematik Udregner";
             this.ResumeLayout(false);
             this.PerformLayout();
 

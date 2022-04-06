@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="EncodingFixer.cs" />
     <Compile Include="Libs\ImageEnhancer.cs" />
+    <Compile Include="Libs\KeyboardHook.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,11 +88,11 @@
     <Compile Include="Tools\Opgaver.com Bypass.Designer.cs">
       <DependentUpon>Opgaver.com Bypass.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\SecretBrowser.cs">
+    <Compile Include="Tools\SkjultBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\SecretBrowser.Designer.cs">
-      <DependentUpon>SecretBrowser.cs</DependentUpon>
+    <Compile Include="Tools\SkjultBrowser.Designer.cs">
+      <DependentUpon>SkjultBrowser.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -118,8 +119,8 @@
     <EmbeddedResource Include="Tools\Opgaver.com Bypass.resx">
       <DependentUpon>Opgaver.com Bypass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\SecretBrowser.resx">
-      <DependentUpon>SecretBrowser.cs</DependentUpon>
+    <EmbeddedResource Include="Tools\SkjultBrowser.resx">
+      <DependentUpon>SkjultBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

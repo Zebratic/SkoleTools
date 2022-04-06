@@ -70,7 +70,7 @@
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.txtInput);
             this.Name = "EngelskGenskriver";
-            this.Text = "Genskriv (Engelsk)";
+            this.Text = "Engelsk Genskriver";
             this.ResumeLayout(false);
 
         }
