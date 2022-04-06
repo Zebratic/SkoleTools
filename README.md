@@ -19,6 +19,7 @@ Smid linket ind og klik download
 - [x] Opgaver.com Bypass/Downloader
   - [x] HTTP Method
   - [x] Selenium Method
+- [X] Skjult Browser
 - [ ] Plagiat tjekker
 - [ ] Tekst omskriver
   - [ ] Engelsk
