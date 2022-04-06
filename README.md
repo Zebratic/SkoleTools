@@ -15,7 +15,7 @@ Så brug din hjerne inden du vælger at være afhængig af mit tool!
 #### Brug HTTP Method!!! (Da det er den bedste)
 Smid linket ind og klik download
 
-# Tool liste
+# Tool liste:
 - [x] Opgaver.com Bypass/Downloader
   - [x] HTTP Method
   - [x] Selenium Method
@@ -24,3 +24,6 @@ Smid linket ind og klik download
 - [ ] Tekst omskriver
   - [ ] Engelsk
   - [ ] Dansk 
+
+# Ekstra:
+* Hurtig skjul vinduet med `HOME` knappen. 
