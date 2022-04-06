@@ -87,6 +87,12 @@
     <Compile Include="Tools\Opgaver.com Bypass.Designer.cs">
       <DependentUpon>Opgaver.com Bypass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tools\SecretBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\SecretBrowser.Designer.cs">
+      <DependentUpon>SecretBrowser.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tools\Opgaver.com Bypass.resx">
       <DependentUpon>Opgaver.com Bypass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\SecretBrowser.resx">
+      <DependentUpon>SecretBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

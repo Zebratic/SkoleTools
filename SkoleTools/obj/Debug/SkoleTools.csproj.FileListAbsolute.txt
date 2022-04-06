@@ -32,3 +32,4 @@ D:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.CoreCompileInputs.cach
 D:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.csproj.CopyComplete
 D:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.exe
 D:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.pdb
+C:\Work\SkoleTools\SkoleTools\obj\Debug\SkoleTools.Tools.SecretBrowser.resources
